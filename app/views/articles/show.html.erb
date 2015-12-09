@@ -1,7 +1,5 @@
 <article>
   <h1><%= @article.title %></h1>
-  <h2><%= "#{@article.title.parameterize}-#{@article.id}" %></h2>
-  <h3><%= "hello my name is ZEKE".parameterize %></h3>
   <%= @article.text %>
 </article>
  
@@ -11,5 +9,5 @@
 <h2>Add a comment:</h2>
 <%= render 'comments/form' %>
  
-<%= link_to 'Edit', edit_article_path(@article) %> |
+<%= link_to 'Edit', edit_article_path({ slug: @article.slug, id: @article.id }) %> |
 <%= link_to 'Back', articles_path %>

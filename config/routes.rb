@@ -1,16 +1,9 @@
 Rails.application.routes.draw do
   root 'welcome#index'
-  
-  get 'articles/:slug', controller: 'articles', action: 'show'
-  
   resources :articles do
     resources :comments
   end
-#  get 'articles/:slug' => 'articles#show'
   
-#assert_generates '/photos/1', { controller: 'photos', action: 'show', id: '1' }
-#assert_generates '/about', controller: 'pages', action: 'about'
-
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
