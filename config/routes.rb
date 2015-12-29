@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   root 'welcome#index'
   get 'login' => 'sessions#new'
+  get ':id' => 'articles#redirect_to_slug'
   resources :articles do
     resources :comments
   end

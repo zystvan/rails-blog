@@ -1,6 +1,13 @@
 class ArticlesController < ApplicationController
-  renderer = Redcarpet::Render::HTML.new()
-  markdown = Redcarpet::Markdown.new(renderer, extensions = {})
+  before_action :redirect_to_slug, only: [:show, :edit]
+  
+  def redirect_to_slug
+    @article = Article.find(params[:id])
+    
+    if params[:id] != @article.slug
+      redirect_to @article, action: action_name
+    end
+  end
   
   def index
     @articles = Article.all
@@ -8,6 +15,7 @@ class ArticlesController < ApplicationController
   
   def show
     @article = Article.find(params[:id])
+    @author = @article.user
     
     render layout: 'blog'
   end
