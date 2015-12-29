@@ -1,13 +1,17 @@
 <article>
   <h1><%= @article.title %></h1>
-  <%= @article.text %>
+  <%= markdown(@article.text) %>
+  
+  <footer>
+    <p>Written by <%= @article.user_id %></p>
+  </footer>
 </article>
- 
+
 <h2>Comments</h2>
 <%= render @article.comments %>
  
 <h2>Add a comment:</h2>
 <%= render 'comments/form' %>
  
-<%= link_to 'Edit', edit_article_path({ slug: @article.slug, id: @article.id }) %> |
-<%= link_to 'Back', articles_path %>
+<%= link_to 'Edit', edit_article_url(@article) %> |
+<%= link_to 'Back', articles_url %>
