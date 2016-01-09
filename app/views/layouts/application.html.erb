@@ -7,9 +7,11 @@
     <%= csrf_meta_tags %>
   </head>
   <body>
-    <% if current_user %>
-      <p><small>You're currently logged in, <%= current_user.name.split[0] %></small></p>
-    <% end %>
+<!--
+    <%# if current_user %>
+      <p><small>You're currently logged in, <%#= current_user.name.split[0] %></small></p>
+    <%# end %>
+-->
     
     <%= yield %>
   </body>

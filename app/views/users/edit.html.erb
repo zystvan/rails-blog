@@ -1,0 +1,8 @@
+<h1>Editing <%= @user.name %></h1>
+
+<%= form_for @user do |f| %>
+  <%= f.text_field :name, :placeholder => 'Name' %>
+  <%= f.email_field :email, :placeholder => 'Email' %>
+  <%#= f.check_box :email_public %>
+  <%= f.submit %>
+<% end %>

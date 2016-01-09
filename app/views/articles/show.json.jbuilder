@@ -6,9 +6,14 @@ json.post do
   json.formatted_text markdown(@article.text)
   json.created_at @article.created_at
   json.updated_at @article.updated_at
-  json.user_id @article.user_id
 end
 
-json.author @article.user
+json.author do
+  json.id @author.id
+  json.name @author.name
+  if @author.email_is_public?
+    json.email @author.email
+  end
+end
 
 json.comments @article.comments

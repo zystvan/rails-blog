@@ -26,4 +26,8 @@ module ApplicationHelper
 
     markdown.render(text).html_safe
   end
+  
+  def email_is_public?
+    self.email_public == true
+  end
 end
