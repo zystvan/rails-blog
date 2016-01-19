@@ -1,6 +1,6 @@
 class ArticlesController < ApplicationController
   before_action :redirect_to_slug, only: [:show, :edit]
-  before_action :require_author, only: [:new, :edit]
+  before_action :require_logged_in, only: [:new, :edit]
   
   def redirect_to_slug
     @article = Article.find(params[:id])
@@ -35,7 +35,7 @@ class ArticlesController < ApplicationController
     @article = Article.new(article_params)
     
     if @article.save
-      redirect_to @article
+      redirect_to article_url(@article)
     else
       render 'new'
     end

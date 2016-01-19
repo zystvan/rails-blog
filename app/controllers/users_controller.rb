@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+  before_action :require_logged_out, only: :new
+  
   def edit
     @user = current_user if current_user
   end

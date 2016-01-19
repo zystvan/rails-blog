@@ -11,7 +11,7 @@ class ApplicationController < ActionController::Base
     end
   end
   
-  def require_author
+  def require_logged_in
     redirect_to login_url unless current_user
   end
 

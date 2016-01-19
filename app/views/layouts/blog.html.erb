@@ -2,7 +2,7 @@
 <html>
   <head>
     <% if @article %>
-      <title>@article.title | Blog Title</title>
+      <title><%= @article.title %> | Blog Title</title>
     <% else %>
       <title>Blog Title</title>
     <% end %>
@@ -12,13 +12,18 @@
     <%= csrf_meta_tags %>
   </head>
   <body>
-    <header>
-      <% if current_user %>
-        <div class="admin-header">
+    <% if current_user %>
+      <div class="admin-header">
+        <div class="align--left">
           <%= current_user.name %>
         </div>
-      <% end %>
-     
+        <div class="align--right">
+          <%= link_to "+", new_article_url, :class => 'article--new-url', :title => 'New article' %>
+        </div>
+      </div>
+    <% end %>
+   
+    <header>
       <h1>Blog Title</h1>
     </header>
     

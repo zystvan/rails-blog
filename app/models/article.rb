@@ -11,7 +11,8 @@ class Article < ActiveRecord::Base
     end
   end
   
-  validates :title, presence: true, length: { minimum: 2 }, uniqueness: true
+  validates :title, presence: true, length: { minimum: 2 }
+  validates :slug, presence: true, uniqueness: true
   
   belongs_to :user
   has_many :comments, dependent: :destroy

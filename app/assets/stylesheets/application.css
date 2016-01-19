@@ -14,15 +14,35 @@
  *= require_self
  */
 
-html, body {
+* {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
 
 .admin-header {
-  background-color: #555;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  background-color: #444;
   color: white;
-  font-size: 12px;
+  font-size: 14px;
   padding: 10px;
+}
+
+.admin-header ~ header {
+  margin-top: 37px;
+}
+
+.align--left, .align--right {
+  display: inline-flex;
+  width: 49%;
+}
+
+.align--left {
+  justify-content: flex-start;
+}
+
+.align--right {
+  justify-content: flex-end;
 }
