@@ -2,4 +2,6 @@
 
 <%= render 'form' %>
 
+<%= link_to 'Delete post', article_url(@article), method: :delete, data: { confirm: "Are you sure you want to delete this post? You can't undo this." }, :class => 'btn btn--warning' %>
+
 <%= link_to 'Back', article_url(@article) %>

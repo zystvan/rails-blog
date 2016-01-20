@@ -1,4 +1,4 @@
-@articles.each do |post|  
+@articles.reverse.each do |post|  
   json.post do
     json.(post, :id, :title, :slug)
     json.raw_text post.text

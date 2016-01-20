@@ -1,4 +1,4 @@
-<% @articles.each do |article| %>
+<% @articles.reverse.each do |article| %>
   <div class="article__card">
     <a href="<%= article_path(article) %>">
       <h1 class="article--title"><%= article.title %></h1>
