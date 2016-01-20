@@ -1,18 +1,16 @@
 json.post do
-  json.id @article.id
-  json.title @article.title
-  json.slug @article.slug
+  json.(@article, :id, :title, :slug)
   json.raw_text @article.text
   json.formatted_text markdown(@article.text)
-  json.created_at @article.created_at
-  json.updated_at @article.updated_at
+  json.(@article, :created_at, :updated_at)
 end
 
 json.author do
   json.id @author.id
   json.name @author.name
-  if @author.email_is_public?
+  if @author
     json.email @author.email
+    json.author_email ".email_is_public?"
   end
 end
 
