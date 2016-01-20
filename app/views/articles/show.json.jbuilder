@@ -6,11 +6,10 @@ json.post do
 end
 
 json.author do
-  json.id @author.id
-  json.name @author.name
-  if @author
+  json.(@author, :id, :name)
+  
+  if @author.email_public || current_user
     json.email @author.email
-    json.author_email ".email_is_public?"
   end
 end
 
