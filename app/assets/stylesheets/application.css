@@ -24,15 +24,31 @@ body {
   background-color: #F8F8F8;
 }
 
-.align--left, .align--right {
+main {
+  padding: 0 40px 0 30vw;
+}
+
+
+/* aligns */
+.align--left,
+.align--right {
   display: inline-flex;
   width: 49%;
 }
-
 .align--left {
   justify-content: flex-start;
 }
-
 .align--right {
   justify-content: flex-end;
+}
+
+/* widths */
+.width--100 {
+  width: 100%;
+}
+.width--50 {
+  width: 50%;
+}
+.width--25 {
+  width: 25%;
 }

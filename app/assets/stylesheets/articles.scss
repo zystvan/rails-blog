@@ -22,8 +22,42 @@
 }
 
 .page--header h1 {
-  background-color: #E0E0E0;
+  background-color: #D5D5D5;
   font-size: 36px;
   text-align: center;
   padding: 20px;
+}
+
+.article--card {
+  position: relative;
+  display: block;
+  width: 550px;
+  height: 360px;
+  color: #444;
+  text-decoration: none;
+  padding: 8px;
+  border: 1px solid #AAA;
+  border-radius: 4px;
+  margin: 25px 0;
+  
+  h1, hr, article {
+    transition: opacity 0.15s;
+  }
+  
+  &:hover h1, &:hover hr, &:hover article {
+    opacity: 0.2;
+  }
+  &:hover .article--read-more {
+    opacity: 1;
+  }
+  
+  .article--read-more {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+    z-index: 9;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.15s;
+  }
 }

@@ -25,11 +25,9 @@
         </div>
       <% end %>
       
-      <h1>Blog Title</h1>
+      <h1><%= link_to "Blog Title", articles_url %></h1>
     </header>
     
-    <main>
-      <%= yield %>
-    </main>
+    <%= yield %>
   </body>
 </html>
