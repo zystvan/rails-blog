@@ -2,7 +2,28 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.article--new-url {
+.logged-in--header {
+  width: 100vw;
+  background: #444 linear-gradient(to bottom, #444, #333);
   color: white;
+  font-size: 14px;
+  padding: 10px 0 10px 10px;
+}
+
+.logged-in--header a {
+  color: #F2F2F2;
+  font-size: 18px;
   text-decoration: none;
+  padding: 0 5px;
+}
+
+.logged-in--header a:hover {
+  color: #D2D2D2;
+}
+
+.page--header h1 {
+  background-color: #E0E0E0;
+  font-size: 36px;
+  text-align: center;
+  padding: 20px;
 }

@@ -20,18 +20,8 @@
   margin: 0;
 }
 
-.admin-header {
-  position: fixed;
-  top: 0;
-  width: 100vw;
-  background-color: #444;
-  color: white;
-  font-size: 14px;
-  padding: 10px;
-}
-
-.admin-header ~ header {
-  margin-top: 37px;
+body {
+  background-color: #F8F8F8;
 }
 
 .align--left, .align--right {
