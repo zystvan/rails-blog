@@ -1,13 +1,11 @@
-<main>
-  <% @articles.reverse.each do |article| %>
-    <a href="<%= article_path(article) %>" class="article--card">
-      <h1 class="article--title"><%= article.title %></h1>
-      <hr class="width--100">
-      <article class="article--content">
-        <%= truncate(strip_tags(markdown(article.text)), length: 200) %>
-      </article>
-      
-      <h4 class="article--read-more">read the entire article</h4>
-    </a>
-  <% end %>
-</main>
+<% @articles.reverse.each do |article| %>
+  <a href="<%= article_path(article) %>" class="article--card">
+    <h1 class="article--title"><%= article.title %></h1>
+    <hr class="width--100">
+    <article class="article--content">
+      <%= truncate(strip_tags(markdown(article.text)), length: 800) %>
+    </article>
+
+    <h4 class="article--read-more">read the entire article</h4>
+  </a>
+<% end %>
