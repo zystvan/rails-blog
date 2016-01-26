@@ -1,10 +1,9 @@
-<article>
-  <h1><%= @article.title %></h1>
-  <%= markdown(@article.text) %>
-  
-  <footer>
-    <p>Written by <%= @author.name %></p>
-  </footer>
+<article class="article--card">
+  <h1 class="article--title"><%= @article.title %></h1>
+  <hr class="width--100">
+  <div class="article--text">
+    <%= truncate(strip_tags(markdown(@article.text)), length: 800) %>
+  </div>
 </article>
 
 <h2>Comments</h2>

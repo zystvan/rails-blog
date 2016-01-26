@@ -2,13 +2,15 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.articles--list li {
+  width: 550px;
+  list-style: none;
+}
+
 .article--card {
   position: relative;
   display: block;
   width: 550px;
-  max-height: 360px;
-  color: #444;
-  text-decoration: none;
   padding: 8px;
   border: 1px solid #AAA;
   border-radius: 4px;
@@ -18,28 +20,37 @@
     margin: 8px 0;
   }
   
-  article {
+  .article--text {
     line-height: 1.3;
   }
+}
+
+.article--link-card, .article--link-card:visited {
+  position: relative;
+  display: block;
+  width: 550px;
+  max-height: 360px;
+  color: #444;
+  text-decoration: none;
+  padding: 0;
   
   * {
     transition: opacity 0.1s;
   }
   
-  &:hover *:not(.article--read-more) {
-    opacity: 0.1;
+  &:hover * *:not(.article--read-more-link) {
+    opacity: 0.2;
   }
-  &:hover .article--read-more {
+  &:hover .article--read-more-link, & *:hover ~ .article--read-more-link {
     opacity: 1;
   }
   
-  .article--read-more {
+  .article--read-more-link {
     position: absolute;
     top: 50%;
     left: 50%;
     opacity: 0;
     z-index: 9;
     transform: translate(-50%, -50%);
-//    transition: opacity 0.1s;
   }
 }
