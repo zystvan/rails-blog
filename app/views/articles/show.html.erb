@@ -2,7 +2,7 @@
   <h1 class="article--title"><%= @article.title %></h1>
   <hr class="width--100">
   <div class="article--text">
-    <%= truncate(strip_tags(markdown(@article.text)), length: 800) %>
+    <%= markdown(@article.text) %>
   </div>
 </article>
 
