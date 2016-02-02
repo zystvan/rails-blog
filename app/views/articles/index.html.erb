@@ -2,7 +2,7 @@
   <% @articles.reverse.each do |article| %>
     <li>
       <a href="<%= article_path(article) %>" class="article--link-card">
-        <article class="article--card">
+        <article>
           <h1 class="article--title"><%= article.title %></h1>
           <hr class="width--100">
           <div class="article--text">

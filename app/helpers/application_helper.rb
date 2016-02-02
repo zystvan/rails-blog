@@ -3,14 +3,14 @@ module ApplicationHelper
     options = {
       filter_html: true,
       hard_wrap: true,
-      link_attributes: { rel: 'nofollow' },
       space_after_headers: true,
       strikethrough: true,
       lax_spacing: true,
       underline: true,
       highlight: true,
       quote: true,
-      footnotes: true
+      footnotes: true,
+      with_toc_data: true
     }
 
     extensions = {

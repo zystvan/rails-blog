@@ -14,3 +14,11 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+ready = function() {
+  hljs.initHighlighting.called = false;
+  hljs.initHighlighting();
+}
+
+$(document).ready(ready);
+$(document).on('page:load', ready);

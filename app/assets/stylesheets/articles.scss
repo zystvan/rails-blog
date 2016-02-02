@@ -10,7 +10,8 @@
 .article--card {
   position: relative;
   display: block;
-  width: 550px;
+  width: 700px;
+  font-size: 18px;
   padding: 8px;
   border: 1px solid #AAA;
   border-radius: 4px;
@@ -32,7 +33,10 @@
   max-height: 360px;
   color: #444;
   text-decoration: none;
-  padding: 0;
+  padding: 8px;
+  border: 1px solid #AAA;
+  border-radius: 4px;
+  margin: 25px 0;
   
   * {
     transition: opacity 0.1s;
@@ -52,5 +56,13 @@
     opacity: 0;
     z-index: 9;
     transform: translate(-50%, -50%);
+  }
+  
+  hr {
+    margin: 8px 0;
+  }
+  
+  .article--text {
+    line-height: 1.3;
   }
 }
