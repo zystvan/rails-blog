@@ -3,13 +3,7 @@ module ApplicationHelper
     options = {
       filter_html: true,
       hard_wrap: true,
-      space_after_headers: true,
-      strikethrough: true,
       lax_spacing: true,
-      underline: true,
-      highlight: true,
-      quote: true,
-      footnotes: true,
       with_toc_data: true
     }
 
@@ -18,7 +12,14 @@ module ApplicationHelper
       superscript: true,
       fenced_code_blocks: true,
       tables: true,
-      autolink: true
+      autolink: true,
+      strikethrough: true,
+      space_after_headers: true,
+      footnotes: true,
+      underline: true,
+      highlight: true,
+      quote: true,
+      superscript: true
     }
 
     renderer = Redcarpet::Render::HTML.new(options)
